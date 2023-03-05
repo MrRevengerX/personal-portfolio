@@ -1,10 +1,57 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { GraphQLClient, gql } from "graphql-request";
 import ProjectCard from "./components/ProjectCard";
 
+const graphAPI = new GraphQLClient(
+  "https://ap-south-1.cdn.hygraph.com/content/clev7igrw3ou201ue8pg2czh2/master"
+);
+
+const QUERY = gql`
+  {
+    projects {
+      id
+      name
+      image {
+        url
+      }
+      description
+      gitUrl
+      behanceUrl
+      tech {
+        url
+        name
+      }
+    }
+  }
+`;
+
 function App() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    graphAPI
+      .request(QUERY)
+      .then((data) => {
+        setProjects(data.projects);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(projects);
   return (
-    <div className="h-screen w-screen bg-blue-400 flex flex-col justify-center items-center">
-      <ProjectCard />
+    <div className="h-screen w-screen bg-blue-400 flex justify-center items-center gap-3">
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          name={project.name}
+          image={project.image.url}
+          description={project.description}
+          gitUrl={project.gitUrl}
+          behanceUrl={project.behanceUrl}
+          tech={project.tech}
+        />
+      ))}
     </div>
   );
 }
