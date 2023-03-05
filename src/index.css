@@ -17,3 +17,7 @@
 .project-btn:hover {
   @apply bg-opacity-0 border-2;
 }
+
+.tech-container:hover .tech-name {
+  @apply text-gray-900;
+}

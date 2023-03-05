@@ -43,7 +43,7 @@ function App() {
 
   console.log(projects);
   return (
-    <div className="min-h-screen w-screen bg-blue-400 ">
+    <div className="flex flex-col items-center min-h-screen w-screen bg-slate-100 dark:bg-gray-900 ">
       <TechnicalSkills />
       <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap">
         {projects.map((project) => (
