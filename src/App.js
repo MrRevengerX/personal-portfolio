@@ -12,6 +12,7 @@ const QUERY = gql`
     projects {
       id
       name
+      scrollableThumbnail
       image {
         url
       }
@@ -46,6 +47,7 @@ function App() {
           key={project.id}
           name={project.name}
           image={project.image.url}
+          scrollable={project.scrollableThumbnail}
           description={project.description}
           gitUrl={project.gitUrl}
           behanceUrl={project.behanceUrl}

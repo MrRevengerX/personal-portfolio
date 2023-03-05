@@ -2,7 +2,7 @@ import React from "react";
 
 import projectThumb from "../assets/img/project-2-thumb.png";
 import htmlLogo from "../assets/svg/html-logo.svg";
-import cssLogo from "../assets/svg/css-logo.svg";
+import graphQL from "../assets/svg/graphql-logo.svg";
 import jsLogo from "../assets/svg/js-logo.svg";
 import reactLogo from "../assets/svg/react-logo.svg";
 import wpLogo from "../assets/svg/wp-logo.svg";
@@ -19,18 +19,20 @@ function projectCard(props) {
   return (
     <div className="project-card p-2 w-72 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="aspect-video rounded-sm overflow-hidden">
-        <img
-          className="project-image transition-all duration-[4s] ease-in-out"
-          src={props.image}
-          alt=""
-        />
+        {props.scrollable ? (
+          <img
+            className="project-image transition-all duration-[4s] ease-in-out"
+            src={props.image}
+            alt=""
+          />
+        ) : (
+          <img className="" src={props.image} alt="" />
+        )}
       </div>
       <div className="p-2">
-        <a href="#">
-          <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {props.name}
-          </h5>
-        </a>
+        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {props.name}
+        </h5>
         <p className="mb-1 text-sm font-normal text-gray-700 dark:text-gray-400">
           {props.description}
         </p>
