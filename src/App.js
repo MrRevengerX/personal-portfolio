@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import ProjectCard from "./components/ProjectCard";
+import TechnicalSkills from "./components/TechnicalSkills";
 
 const graphAPI = new GraphQLClient(
   "https://ap-south-1.cdn.hygraph.com/content/clev7igrw3ou201ue8pg2czh2/master"
@@ -42,7 +43,8 @@ function App() {
 
   console.log(projects);
   return (
-    <div className="min-h-screen w-screen bg-blue-400 flex justify-center items-center columns-3 gap-12">
+    <div className="min-h-screen w-screen bg-blue-400 ">
+      <TechnicalSkills />
       <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap">
         {projects.map((project) => (
           <ProjectCard
