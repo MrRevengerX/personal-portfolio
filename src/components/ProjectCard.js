@@ -33,7 +33,7 @@ function projectCard(props) {
       </div>
       <div className="project-btns absolute flex flex-col gap-1 bottom-2 -right-6 opacity-0 transition-all duration-200 ease-in-out">
         {props.livePreviewUrl && (
-          <a href={props.livePreviewUrl} target="_blank">
+          <a href={props.livePreviewUrl} target="_blank" rel="noreferrer">
             <div className="w-10 h-10 bg-slate-50 dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
               <HiGlobeAlt />
             </div>
@@ -41,7 +41,7 @@ function projectCard(props) {
         )}
 
         {props.gitUrl && (
-          <a href={props.gitUrl} target="_blank">
+          <a href={props.gitUrl} target="_blank" rel="noreferrer">
             <div className="w-10 h-10 bg-slate-50 dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
               <FaGithub />
             </div>
@@ -49,7 +49,7 @@ function projectCard(props) {
         )}
 
         {props.behanceUrl && (
-          <a href={props.behanceUrl} target="_blank">
+          <a href={props.behanceUrl} target="_blank" rel="noreferrer">
             <div className="w-10 h-10 bg-slate-50 dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
               <FaBehance />
             </div>
