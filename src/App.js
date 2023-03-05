@@ -17,6 +17,7 @@ const QUERY = gql`
         url
       }
       description
+      livePreview
       gitUrl
       behanceUrl
       tech {
@@ -41,7 +42,7 @@ function App() {
 
   console.log(projects);
   return (
-    <div className="h-screen w-screen bg-blue-400 flex justify-center items-center gap-3">
+    <div className="column-xs h-screen w-screen bg-blue-400 flex justify-center items-center gap-12">
       {projects.map((project) => (
         <ProjectCard
           key={project.id}
@@ -49,6 +50,7 @@ function App() {
           image={project.image.url}
           scrollable={project.scrollableThumbnail}
           description={project.description}
+          livePreviewUrl={project.livePreview}
           gitUrl={project.gitUrl}
           behanceUrl={project.behanceUrl}
           tech={project.tech}

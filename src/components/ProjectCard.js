@@ -1,4 +1,6 @@
 import React from "react";
+import { FaGithub, FaBehance } from "react-icons/fa";
+import { HiGlobeAlt } from "react-icons/hi";
 
 import projectThumb from "../assets/img/project-2-thumb.png";
 import htmlLogo from "../assets/svg/html-logo.svg";
@@ -15,9 +17,9 @@ import expressLogo from "../assets/svg/express-logo.svg";
 
 function projectCard(props) {
   const tech = [...props.tech];
-  console.log(tech);
+
   return (
-    <div className="project-card p-2 w-72 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="relative project-card p-2 w-72 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="aspect-video rounded-sm overflow-hidden">
         {props.scrollable ? (
           <img
@@ -27,6 +29,31 @@ function projectCard(props) {
           />
         ) : (
           <img className="" src={props.image} alt="" />
+        )}
+      </div>
+      <div className="project-btns absolute flex flex-col gap-1 bottom-2 -right-6 opacity-0 transition-all duration-200 ease-in-out">
+        {props.livePreviewUrl && (
+          <a href={props.livePreviewUrl} target="_blank">
+            <div className="w-10 h-10 bg-slate-50 dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
+              <HiGlobeAlt />
+            </div>
+          </a>
+        )}
+
+        {props.gitUrl && (
+          <a href={props.gitUrl} target="_blank">
+            <div className="w-10 h-10 bg-slate-50 dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
+              <FaGithub />
+            </div>
+          </a>
+        )}
+
+        {props.behanceUrl && (
+          <a href={props.behanceUrl} target="_blank">
+            <div className="w-10 h-10 bg-slate-50 dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
+              <FaBehance />
+            </div>
+          </a>
         )}
       </div>
       <div className="p-2">

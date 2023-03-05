@@ -9,3 +9,11 @@
 .project-card:hover .project-image {
   @apply transform mt-[152px] -translate-y-[100%];
 }
+
+.project-card:hover .project-btns {
+  @apply opacity-100 -right-9;
+}
+
+.project-btn:hover {
+  @apply bg-opacity-0 border-2;
+}
