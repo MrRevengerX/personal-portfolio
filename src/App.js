@@ -4,62 +4,13 @@ import { GraphQLClient, gql } from "graphql-request";
 import ProjectCard from "./components/ProjectCard";
 import TechnicalSkills from "./components/TechnicalSkills";
 
-const graphAPI = new GraphQLClient(
-  "https://ap-south-1.cdn.hygraph.com/content/clev7igrw3ou201ue8pg2czh2/master"
-);
-
-const QUERY = gql`
-  {
-    projects {
-      id
-      name
-      scrollableThumbnail
-      image {
-        url
-      }
-      description
-      livePreview
-      gitUrl
-      behanceUrl
-      tech {
-        url
-        name
-      }
-    }
-  }
-`;
+import TechnicalSkills from "./components/TechnicalSkills";
 
 function App() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    graphAPI
-      .request(QUERY)
-      .then((data) => {
-        setProjects(data.projects);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  console.log(projects);
   return (
     <div className="flex flex-col items-center min-h-screen w-screen bg-slate-100 dark:bg-gray-900 ">
       <TechnicalSkills />
-      <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            name={project.name}
-            image={project.image.url}
-            scrollable={project.scrollableThumbnail}
-            description={project.description}
-            livePreviewUrl={project.livePreview}
-            gitUrl={project.gitUrl}
-            behanceUrl={project.behanceUrl}
-            tech={project.tech}
-          />
-        ))}
-      </div>
+      <ProjectSection />
     </div>
   );
 }

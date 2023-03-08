@@ -2,7 +2,7 @@ import React from "react";
 
 import htmlLogo from "../assets/svg/html-logo.svg";
 import cssLogo from "../assets/svg/css-logo.svg";
-import graphQL from "../assets/svg/graphql-logo.svg";
+import phpLogo from "../assets/svg/php-logo.svg";
 import jsLogo from "../assets/svg/js-logo.svg";
 import reactLogo from "../assets/svg/react-logo.svg";
 import wpLogo from "../assets/svg/wp-logo.svg";
@@ -65,7 +65,7 @@ function TechnicalSkills() {
             </p>
           </div>
           <div className="text-sm tech-container bg-white drop-shadow-xl dark:bg-gray-800 bg-opacity-60 p-10 rounded-lg hover:bg-gray-200 dark:hover:bg-white transition-colors duration-200 ease-in-out flex flex-col justify-center items-center gap-2">
-            <img className="w-10 h-10" src={graphQL} alt="" />
+            <img className="w-10 h-10" src={phpLogo} alt="" />
             <p className="tech-name dark:text-white bottom-2 transition-colors duration-100 ease-in-out">
               GraphQL
             </p>
