@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="container min-h-screen flex flex-col items-center justify-center bg-[#35B993]">
+        <div className="container text-center min-h-screen flex flex-col items-center justify-center bg-[#35B993]">
           <img src={coding} className="w-96" alt="" />
-          <h1 className="font-bold text-[48px] text-white">
+          <h1 className="font-bold text-[48px] leading-10 text-white pb-4">
             Under Construction
           </h1>
           <h5 className="text-white text-lg">Wanna have a sneak peak?</h5>
