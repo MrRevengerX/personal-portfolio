@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaBehance } from "react-icons/fa";
 import { HiGlobeAlt } from "react-icons/hi";
+import Tooltip from "@mui/material/Tooltip";
 
 import projectThumb from "../assets/img/project-2-thumb.png";
 import htmlLogo from "../assets/svg/html-logo.svg";
@@ -67,7 +68,9 @@ function projectCard(props) {
           <h6 className=" text-white font-bold">Technologies</h6>
           <div className="flex gap-2 pt-1 flex-wrap">
             {tech.map((tech) => (
-              <img className="technologies-icon" src={tech.url} alt="" />
+              <Tooltip title={tech.name} arrow>
+                <img className="technologies-icon" src={tech.url} alt="" />
+              </Tooltip>
             ))}
           </div>
         </div>
