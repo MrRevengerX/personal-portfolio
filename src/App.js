@@ -1,10 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { GraphQLClient, gql } from "graphql-request";
-import ProjectCard from "./components/ProjectCard";
 import TechnicalSkills from "./components/TechnicalSkills";
-
-import TechnicalSkills from "./components/TechnicalSkills";
+import ProjectSection from "./components/ProjectSection";
 
 function App() {
   return (
