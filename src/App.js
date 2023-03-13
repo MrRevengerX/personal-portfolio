@@ -27,39 +27,28 @@ const QUERY = gql`
         name
       }
     }
-    techSkills {
-      category
-      technology {
-        name
-        url
-      }
-    }
   }
 `;
 
 function App() {
   const [projects, setProjects] = useState([]);
-  const [skills, setSkills] = useState([]);
 
   useEffect(() => {
     graphAPI
       .request(QUERY)
       .then((data) => {
         setProjects(data.projects);
-        setSkills(data.techSkills);
       })
       .catch((err) => console.log("fuck ", err));
   }, []);
 
   console.log(projects);
-  console.log(skills);
-
   // console.log(skills[0].technology);
 
   console.log(projects);
   return (
     <div className="flex flex-col items-center min-h-screen w-screen bg-slate-100 dark:bg-gray-900 ">
-      <TechnicalSkills skills={skills} />
+      <TechnicalSkills />
       <ProjectSection projects={projects} />
     </div>
   );
