@@ -18,7 +18,7 @@ function HeroSection() {
     });
   }, []);
   return (
-    <div className="container lg:max-w-6xl lg:px-12 overflow-hidden mb-12">
+    <div className="container lg:max-w-6xl lg:px-12 overflow-hidden">
       <div className=" flex flex-col lg:flex-row min-h-screen items-center justify-center gap-10 lg:gap-0">
         <div className="text-center basis-2/3 flex flex-col gap-1 items-center lg:text-left lg:items-start">
           <p className="text-2xl dark:text-white">Howdy!</p>
@@ -60,8 +60,9 @@ function HeroSection() {
             </a>
           </div>
           <a
-            href="#"
-            className="mt-4 px-7 w-42 py-2 flex justify-center items-center gap-3 bg-my-purple-400 rounded-md text-lg hover:bg-white hover:text-black transition duration-200 ease-in-out"
+            href="https://drive.google.com/file/d/1BuFNA9IFr5n8kKApZOqgWkxZsRxmK4of/view?usp=share_link"
+            className="mt-4 px-7 w-42 py-2 flex justify-center items-center gap-3 text-white dark:text-gray-900 bg-my-purple-400 rounded-md text-lg hover:bg-gray-900 dark:hover:bg-white dark:hover:text-black transition duration-200 ease-in-out"
+            target={"_blank"}
           >
             <FaCloudDownloadAlt /> Resume
           </a>
@@ -75,7 +76,7 @@ function HeroSection() {
             />
             <div
               class="absolute tk-blob w-[280px] md:w-[350px] p-4 "
-              style={{ "--amount": 2, "--time": "25s" }}
+              style={{ "--amount": 2, "--time": "35s" }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 927 926.1">
                 <path
@@ -91,7 +92,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      <a className="hidden lg:block" id="scroll-btn" href="#section-2"></a>
+      <a className="hidden lg:block" id="scroll-btn" href="#techSkills"></a>
     </div>
   );
 }

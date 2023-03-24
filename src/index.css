@@ -9,15 +9,15 @@
   display: none;
 }
 
+::selection {
+  @apply bg-my-purple-100 text-white;
+}
+
 @layer base {
   html {
     font-family: Poppins, system-ui, sans-serif;
     scroll-behavior: smooth;
   }
-}
-
-* {
-  outline: 1px solid rgba(161, 25, 255, 0.2);
 }
 
 .technologies-icon {
@@ -44,7 +44,7 @@ a#scroll-btn {
   position: absolute;
   height: 50px;
   width: 30px;
-  border: 2px solid #ffffff;
+  @apply border-2 border-gray-900 dark:border-white;
   margin: auto;
   left: 0;
   right: 0;
@@ -60,7 +60,7 @@ a#scroll-btn:before {
   top: 10px;
   height: 8px;
   width: 8px;
-  background-color: #ffffff;
+  @apply bg-gray-900 dark:bg-white;
   border-radius: 50%;
   animation: move-down 2s infinite;
 }
@@ -80,6 +80,6 @@ a#scroll-btn:after {
   font-size: 10px;
   left: -20px;
   bottom: 3.5rem;
-  color: #ffffff;
+  @apply text-gray-900 dark:text-white;
   opacity: 0.5;
 }

@@ -51,7 +51,7 @@ function App() {
 
   console.log(projects);
   return (
-    <div className="flex flex-col items-center min-h-screen bg-slate-100 dark:bg-gray-900 ">
+    <div className="flex flex-col items-center min-h-screen bg-violet-200 dark:bg-gray-900 ">
       <NavigationBar />
       <HeroSection />
       <TechnicalSkills />

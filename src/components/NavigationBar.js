@@ -11,8 +11,8 @@ function NavigationBar() {
   }, []);
   return (
     <nav
-      className={`hidden md:block z-20 w-screen backdrop-filter bg-black md:backdrop-blur-md bg-opacity-0 transition-all duration-300 ease-in-out md:-mb-24 ${
-        scroll ? "sticky top-0 bg-opacity-30" : ""
+      className={`hidden md:block z-20 w-screen backdrop-filter bg-white dark:bg-black md:backdrop-blur-md bg-opacity-0 dark:bg-opacity-0 transition-all duration-300 ease-in-out md:-mb-24 ${
+        scroll ? "sticky top-0 bg-opacity-30 dark:bg-opacity-30" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-4">
@@ -21,7 +21,7 @@ function NavigationBar() {
             scroll ? "h-20" : "h-24"
           }`}
         >
-          <div className="w-44 fill-white">
+          <div className="w-44 fill-black dark:fill-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1101.41 256.28"

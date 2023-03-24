@@ -3,7 +3,7 @@ import siteLogo from "../assets/svg/revengerx-logo.svg";
 
 function Footer() {
   return (
-    <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4 w-screen">
+    <footer class="bg-white rounded-t-lg shadow dark:bg-gray-900 w-screen">
       <div class="max-w-6xl mx-auto p-4 md:px-6 md:py-8">
         <div class="flex flex-col sm:flex-row items-center justify-between">
           <a
@@ -11,7 +11,7 @@ function Footer() {
             class="flex items-center mb-4 sm:mb-0"
           >
             <svg
-              className="h-8 mr-3 fill-white"
+              className="h-8 mr-3 fill-black dark:fill-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1101.41 256.28"
             >
