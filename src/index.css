@@ -4,10 +4,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   html {
     font-family: Poppins, system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
+}
+
+* {
+  outline: 1px solid rgba(161, 25, 255, 0.2);
 }
 
 .technologies-icon {
@@ -28,4 +38,48 @@
 
 .tech-container:hover .tech-name {
   @apply text-gray-900;
+}
+
+a#scroll-btn {
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  border: 2px solid #ffffff;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  border-radius: 3em;
+}
+a#scroll-btn:before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10px;
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+@keyframes move-down {
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+a#scroll-btn:after {
+  position: absolute;
+  content: "SCROLL DOWN";
+  width: 72px;
+  font-size: 10px;
+  left: -20px;
+  bottom: 3.5rem;
+  color: #ffffff;
+  opacity: 0.5;
 }

@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import DrawBlob, { BlobType, generatePoints } from "blob-animated";
 import devImage from "../assets/img/mrDev.jpg";
 import devImage2 from "../assets/img/project-1-thumb.png";
+import { FaBehance, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
 
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
@@ -17,16 +19,46 @@ function HeroSection() {
   }, []);
   return (
     <div className="container lg:max-w-6xl lg:px-12 overflow-hidden">
-      <div className=" flex flex-col md:flex-row min-h-screen items-center justify-center gap-10 md:gap-0">
-        <div className="text-center basis-2/3 flex flex-col gap-1 items-center md:text-left md:items-start">
+      <div className=" flex flex-col lg:flex-row min-h-screen items-center justify-center gap-10 lg:gap-0">
+        <div className="text-center basis-2/3 flex flex-col gap-1 items-center lg:text-left lg:items-start">
           <p className="text-2xl dark:text-white">Howdy!</p>
           <h1 className="text-[48px] leading-tight dark:text-white font-bold text-10 capitalize sm:text-[64px]">
             <div className="text-my-purple-400">I'm Ravindu</div>
             Senarathna
           </h1>
-          <h2 className="text-lg dark:text-white capitalize sm:text-2xl">
+          <h2 className="text-md dark:text-white capitalize sm:text-2xl">
             software engineer undergrduate
           </h2>
+          <div className="md:hidden flex mt-4 gap-5 dark:text-white text-2xl">
+            <a
+              href="https://www.linkedin.com/in/ravindusenruwan/"
+              className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
+              target={"_blank"}
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://www.behance.net/ravindusenruwan"
+              className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
+              target={"_blank"}
+            >
+              <FaBehance />
+            </a>
+            <a
+              href="https://github.com/MrRevengerX"
+              className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
+              target={"_blank"}
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="mailto:ravindusenruwan@gmail.com"
+              className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
+              target={"_blank"}
+            >
+              <MdAlternateEmail />
+            </a>
+          </div>
           <a
             href="#"
             className="mt-4 px-7 w-42 py-2 flex justify-center items-center gap-3 bg-my-purple-400 rounded-md text-lg hover:bg-white hover:text-black transition duration-200 ease-in-out"
@@ -59,6 +91,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
+      <a className="hidden lg:block" id="scroll-btn" href="#section-2"></a>
     </div>
   );
 }

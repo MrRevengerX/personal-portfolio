@@ -1,13 +1,26 @@
-import React from "react";
-import siteLogo from "../assets/svg/revengerx-logo.svg";
+import { React, useEffect, useState } from "react";
 import { FaBehance, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 
 function NavigationBar() {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 100);
+    });
+  }, []);
   return (
-    <nav className="sticky top-0 z-20 bg-black w-screen -mb-24 backdrop-filter backdrop-blur-lg bg-opacity-30">
+    <nav
+      className={`hidden md:block z-20 w-screen backdrop-filter bg-black md:backdrop-blur-lg bg-opacity-0 transition-all duration-300 ease-in-out ${
+        scroll ? "sticky top-0 bg-opacity-30" : "md:-mb-16"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-24">
+        <div
+          className={`flex items-center justify-between transition-all duration-300 ease-in-out ${
+            scroll ? "h-20" : "h-24"
+          }`}
+        >
           <div className="w-44 fill-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
