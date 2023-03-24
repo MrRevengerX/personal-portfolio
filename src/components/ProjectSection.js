@@ -1,50 +1,16 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { GraphQLClient, gql } from "graphql-request";
 import ProjectCard from "./ProjectCard";
 
-const graphAPI = new GraphQLClient(
-  "https://ap-south-1.cdn.hygraph.com/content/clev7igrw3ou201ue8pg2czh2/master"
-);
-
-const QUERY = gql`
-  {
-    projects {
-      id
-      name
-      scrollableThumbnail
-      image {
-        url
-      }
-      description
-      livePreview
-      gitUrl
-      behanceUrl
-      tech {
-        url
-        name
-      }
-    }
-  }
-`;
-
-function ProjectSection() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    graphAPI
-      .request(QUERY)
-      .then((data) => {
-        setProjects(data.projects);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  console.log(projects);
+function ProjectSection(props) {
+  // console.log(projects);
   return (
-    <div className="min-h-screen">
-      <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap">
-        {projects.map((project) => (
+    <div className="min-h-screen mb-16 lg:mb-18 mt-12 lg:mt-20">
+      <h2 className="text-3xl md:text-5xl font-bold text-my-purple-400 text-center mb-0 lg:mb-8">
+        &lt;<span className="text-gray-900 dark:text-white">Projects</span>
+        &#47;&gt;
+      </h2>
+      <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap pt-10">
+        {props.projects.map((project) => (
           <ProjectCard
             key={project.id}
             name={project.name}
