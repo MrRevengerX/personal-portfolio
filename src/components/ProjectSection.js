@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 function ProjectSection(props) {
   // console.log(projects);
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mb-16 lg:mb-5">
       <h2 className="text-3xl font-bold dark:text-white text-center">
         Projects
       </h2>

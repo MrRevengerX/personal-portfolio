@@ -26,7 +26,7 @@ import rLogo from "../assets/svg/r-logo.svg";
 
 function TechnicalSkills() {
   return (
-    <div className="min-h-screen flex flex-col items-center flex-start py-5">
+    <div className="min-h-screen flex flex-col items-center flex-start py-5 mb-12">
       <h2 className="text-3xl font-bold dark:text-white">Technical Skills</h2>
       <div className="flex gap-7 flex-wrap items-center justify-center py-6">
         <div className="flex flex-col items-center">

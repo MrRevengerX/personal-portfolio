@@ -18,7 +18,7 @@ function HeroSection() {
     });
   }, []);
   return (
-    <div className="container lg:max-w-6xl lg:px-12 overflow-hidden">
+    <div className="container lg:max-w-6xl lg:px-12 overflow-hidden mb-12">
       <div className=" flex flex-col lg:flex-row min-h-screen items-center justify-center gap-10 lg:gap-0">
         <div className="text-center basis-2/3 flex flex-col gap-1 items-center lg:text-left lg:items-start">
           <p className="text-2xl dark:text-white">Howdy!</p>

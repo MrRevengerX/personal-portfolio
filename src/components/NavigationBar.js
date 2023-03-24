@@ -11,8 +11,8 @@ function NavigationBar() {
   }, []);
   return (
     <nav
-      className={`hidden md:block z-20 w-screen backdrop-filter bg-black md:backdrop-blur-lg bg-opacity-0 transition-all duration-300 ease-in-out ${
-        scroll ? "sticky top-0 bg-opacity-30" : "md:-mb-16"
+      className={`hidden md:block z-20 w-screen backdrop-filter bg-black md:backdrop-blur-md bg-opacity-0 transition-all duration-300 ease-in-out md:-mb-24 ${
+        scroll ? "sticky top-0 bg-opacity-30" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-4">
@@ -52,19 +52,20 @@ function NavigationBar() {
             >
               <FaLinkedinIn />
             </a>
-            <a
-              href="https://www.behance.net/ravindusenruwan"
-              className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
-              target={"_blank"}
-            >
-              <FaBehance />
-            </a>
+
             <a
               href="https://github.com/MrRevengerX"
               className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
               target={"_blank"}
             >
               <FaGithub />
+            </a>
+            <a
+              href="https://www.behance.net/ravindusenruwan"
+              className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
+              target={"_blank"}
+            >
+              <FaBehance />
             </a>
             <a
               href="mailto:ravindusenruwan@gmail.com"
