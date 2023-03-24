@@ -1,5 +1,4 @@
 import React from "react";
-import siteLogo from "../assets/svg/revengerx-logo.svg";
 
 function Footer() {
   return (
