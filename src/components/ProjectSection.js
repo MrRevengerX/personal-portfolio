@@ -5,7 +5,10 @@ function ProjectSection(props) {
   // console.log(projects);
   return (
     <div className="min-h-screen">
-      <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap">
+      <h2 className="text-3xl font-bold dark:text-white text-center">
+        Projects
+      </h2>
+      <div className="container flex justify-center items-top columns-3 gap-12 flex-wrap pt-10">
         {props.projects.map((project) => (
           <ProjectCard
             key={project.id}

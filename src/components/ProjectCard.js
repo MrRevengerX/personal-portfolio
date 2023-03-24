@@ -22,7 +22,7 @@ function projectCard(props) {
       <div className="project-btns absolute flex flex-col gap-1 bottom-2 -right-6 lg:opacity-0 transition-all duration-200 ease-in-out">
         {props.livePreviewUrl && (
           <a href={props.livePreviewUrl} target="_blank" rel="noreferrer">
-            <div className="w-10 h-10 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-gray-900 dark:text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
+            <div className="w-10 h-10 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-gray-900 dark:text-white hover:text-my-purple-400 transition-colors duration-200 ease-in-out">
               <HiGlobeAlt />
             </div>
           </a>
@@ -30,7 +30,7 @@ function projectCard(props) {
 
         {props.gitUrl && (
           <a href={props.gitUrl} target="_blank" rel="noreferrer">
-            <div className="w-10 h-10 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-gray-900 dark:text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
+            <div className="w-10 h-10 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-gray-900 dark:text-white hover:text-my-purple-400 transition-colors duration-200 ease-in-out">
               <FaGithub />
             </div>
           </a>
@@ -38,7 +38,7 @@ function projectCard(props) {
 
         {props.behanceUrl && (
           <a href={props.behanceUrl} target="_blank" rel="noreferrer">
-            <div className="w-10 h-10 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-gray-900 dark:text-white hover:text-red-600 transition-colors duration-200 ease-in-out">
+            <div className="w-10 h-10 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-br-lg rounded-tr-lg flex items-center justify-center text-gray-900 dark:text-white hover:text-my-purple-400 transition-colors duration-200 ease-in-out">
               <FaBehance />
             </div>
           </a>

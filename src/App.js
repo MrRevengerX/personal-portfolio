@@ -1,9 +1,12 @@
 import React from "react";
 import TechnicalSkills from "./components/TechnicalSkills";
 import ProjectSection from "./components/ProjectSection";
+import "./assets/css/blobz.min.css";
 
 import { useState, useEffect } from "react";
 import { GraphQLClient, gql } from "graphql-request";
+import HeroSection from "./components/HeroSection";
+import NavigationBar from "./components/NavigationBar";
 
 const graphAPI = new GraphQLClient(
   "https://ap-south-1.cdn.hygraph.com/content/clev7igrw3ou201ue8pg2czh2/master"
@@ -48,6 +51,8 @@ function App() {
   console.log(projects);
   return (
     <div className="flex flex-col items-center min-h-screen w-screen bg-slate-100 dark:bg-gray-900 ">
+      <NavigationBar />
+      <HeroSection />
       <TechnicalSkills />
       <ProjectSection projects={projects} />
     </div>
