@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import DrawBlob, { BlobType, generatePoints } from "blob-animated";
 import devImage from "../assets/img/mrDev.jpg";
-import devImage2 from "../assets/img/project-1-thumb.png";
 import { FaBehance, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 
@@ -69,7 +68,12 @@ function HeroSection() {
         </div>
         <div className="basis-1/3 flex justify-center">
           <div className="relative">
-            <img id="devImg" src={devImage} style={{ display: "none" }} />
+            <img
+              id="devImg"
+              alt="Ravindu Senarathna"
+              src={devImage}
+              style={{ display: "none" }}
+            />
             <canvas
               className="absolute w-[280px] md:w-[350px] z-10"
               id="imageCanvas"
