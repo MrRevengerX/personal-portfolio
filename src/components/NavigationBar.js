@@ -1,8 +1,28 @@
 import { React, useEffect, useState } from "react";
 import { FaBehance, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
+import { motion } from "framer-motion";
 
 function NavigationBar() {
+  const socialIconsContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 1.5,
+      },
+    },
+  };
+  const socialIcon = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -12,7 +32,7 @@ function NavigationBar() {
   return (
     <nav
       className={`hidden md:block z-20 w-screen backdrop-filter bg-white dark:bg-black md:backdrop-blur-md bg-opacity-0 dark:bg-opacity-0 transition-all duration-300 ease-in-out md:-mb-24 ${
-        scroll ? "sticky top-0 bg-opacity-30 dark:bg-opacity-30" : ""
+        scroll ? "fixed top-0 bg-opacity-30 dark:bg-opacity-30" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-4">
@@ -22,7 +42,10 @@ function NavigationBar() {
           }`}
         >
           <div className="w-44 fill-black dark:fill-white">
-            <svg
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1101.41 256.28"
             >
@@ -41,40 +64,49 @@ function NavigationBar() {
                   {"REVENGERX"}
                 </text>
               </g>
-            </svg>
+            </motion.svg>
           </div>
 
-          <div className="flex gap-10 dark:text-white text-2xl">
-            <a
+          <motion.div
+            variants={socialIconsContainer}
+            initial="hidden"
+            animate="show"
+            className="flex gap-10 dark:text-white text-2xl"
+          >
+            <motion.a
+              variants={socialIcon}
               href="https://www.linkedin.com/in/ravindusenruwan/"
               className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
               target={"_blank"}
             >
               <FaLinkedinIn />
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              variants={socialIcon}
               href="https://github.com/MrRevengerX"
               className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
               target={"_blank"}
             >
               <FaGithub />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={socialIcon}
               href="https://www.behance.net/ravindusenruwan"
               className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
               target={"_blank"}
             >
               <FaBehance />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={socialIcon}
               href="mailto:ravindusenruwan@gmail.com"
               className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
               target={"_blank"}
             >
               <MdAlternateEmail />
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </nav>
