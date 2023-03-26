@@ -48,6 +48,13 @@ function NavigationBar() {
               transition={{ duration: 0.5, delay: 1.5 }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1101.41 256.28"
+              className={"cursor-pointer"}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
             >
               <g data-name="Layer 2">
                 <path d="m16.34 54.06 116.29 63.05-20.69 43.71-59.65-9.26-46.16-29.68L0 163.95l40.44 71.49 36.09 4.63 20.83 16.21 25.06-11.03 3.13-20.16 11.44 2.73 12.12-10.89L150.2 128l-5.72-10.89 29.41-40.99 5.59-64.14-43.44-3.95L119.83 0l-11.71 6.54-41.67.13 2.86 20.56-30.36 22.34-22.61 4.49z" />
