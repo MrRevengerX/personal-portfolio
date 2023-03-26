@@ -1,14 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Typed from "react-typed";
 import { motion } from "framer-motion";
 import DrawBlob, { BlobType, generatePoints } from "blob-animated";
 import devImage from "../assets/img/mrDev.jpg";
+
+import { GraphQLClient, gql } from "graphql-request";
+
 import { FaBehance, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
-
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
 function HeroSection() {
+  const graphAPI = new GraphQLClient(
+    "https://ap-south-1.cdn.hygraph.com/content/clev7igrw3ou201ue8pg2czh2/master"
+  );
+
+  const QUERY = gql`
+    {
+      resumes {
+        resumeLink
+      }
+    }
+  `;
   const socialIconsContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -37,6 +50,22 @@ function HeroSection() {
       scramble: 0.05,
     });
   }, []);
+
+  const [resumeLink, setresumeLink] = useState([]);
+
+  useEffect(() => {
+    graphAPI
+      .request(QUERY)
+      .then((data) => {
+        setresumeLink(data.resumes);
+      })
+      .catch((err) => console.log("fuck ", err));
+  }, []);
+  console.log(resumeLink[0]);
+
+  function downloadResume() {
+    window.open(resumeLink[0].resumeLink);
+  }
   return (
     <div className="container lg:max-w-6xl lg:px-12 overflow-hidden">
       <div className=" flex flex-col lg:flex-row min-h-screen items-center justify-center gap-10 lg:gap-0">
@@ -121,8 +150,8 @@ function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.1 }}
-            href="https://drive.google.com/file/d/1BuFNA9IFr5n8kKApZOqgWkxZsRxmK4of/view?usp=share_link"
-            className="mt-4 px-7 w-42 py-2 flex justify-center items-center gap-3 text-white dark:text-gray-900 bg-my-purple-400 rounded-md text-lg hover:bg-gray-900 dark:hover:bg-white dark:hover:text-black transition duration-200 ease-in-out"
+            onClick={downloadResume}
+            className="mt-4 cursor-pointer px-7 w-42 py-2 flex justify-center items-center gap-3 text-white dark:text-gray-900 bg-my-purple-400 rounded-md text-lg hover:bg-gray-900 dark:hover:bg-white dark:hover:text-black transition duration-200 ease-in-out"
             target={"_blank"}
           >
             <FaCloudDownloadAlt /> Resume
