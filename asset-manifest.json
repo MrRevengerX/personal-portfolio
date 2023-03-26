@@ -1,37 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.45669c1b.css",
-    "main.js": "/static/js/main.3fcf1e2b.js",
+    "main.css": "/static/css/main.e31897b0.css",
+    "main.js": "/static/js/main.f364a5c3.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/mrDev.jpg": "/static/media/mrDev.247ca12e5754d64f4d0c.jpg",
     "index.html": "/index.html",
-    "static/media/react-logo.svg": "/static/media/react-logo.33f78f246a62d3e44f16ffec59813450.svg",
-    "static/media/nextjs-logo.svg": "/static/media/nextjs-logo.952eb8159825c230ffa6754bded14e3c.svg",
-    "static/media/java-logo.svg": "/static/media/java-logo.20e92ef26cade183894acdc979f97b45.svg",
-    "static/media/ae-logo.svg": "/static/media/ae-logo.37a0eac619529b60e28773f6b9ac118a.svg",
-    "static/media/ps-logo.svg": "/static/media/ps-logo.60eda61e3cfe863729f83f2f106c1223.svg",
-    "static/media/xd-logo.svg": "/static/media/xd-logo.5e9bef7ddcd0ea43de0e92c933d34623.svg",
-    "static/media/kotlin-logo.svg": "/static/media/kotlin-logo.3ea64b574bfa55b4316132f1c5a99c53.svg",
-    "static/media/r-logo.svg": "/static/media/r-logo.2da55f926557c943ffe724d11774aa44.svg",
-    "static/media/ts-logo.svg": "/static/media/ts-logo.e668f751d1683c7fbaaa0214b4e863ba.svg",
-    "static/media/python-logo.svg": "/static/media/python-logo.de129345cfc298232ceb2998712289a1.svg",
-    "static/media/ai-logo.svg": "/static/media/ai-logo.a546955fcf0a25d966618958c27022a4.svg",
-    "static/media/pr-logo.svg": "/static/media/pr-logo.b71d235a7706d797a3edec80f5b3a6ec.svg",
-    "static/media/node-logo.svg": "/static/media/node-logo.0da25cd66d969f8ac11deaaf54d811bf.svg",
-    "static/media/flutter-logo.svg": "/static/media/flutter-logo.5e0ebde82050c8fcdf6121b4498b520c.svg",
-    "static/media/php-logo.svg": "/static/media/php-logo.797de98e53f256980717d5c1cfb3fcf8.svg",
-    "static/media/wp-logo.svg": "/static/media/wp-logo.0d7c8057a59a16601b3b6ed667c34e19.svg",
-    "static/media/sass-logo.svg": "/static/media/sass-logo.268e3eae7bab4d31e903cda005f309c2.svg",
-    "static/media/figma-logo.svg": "/static/media/figma-logo.ff6917a6aa4a738c10246394f4e99305.svg",
-    "static/media/js-logo.svg": "/static/media/js-logo.5367cea611d20a78ea830db868b82159.svg",
-    "static/media/mongo-logo.svg": "/static/media/mongo-logo.be56947644a3bf25d8c33a0699c8ebc6.svg",
-    "static/media/tailwind-logo.svg": "/static/media/tailwind-logo.d84a6f369e7170891c4a19587ccf78e1.svg",
-    "main.45669c1b.css.map": "/static/css/main.45669c1b.css.map",
-    "main.3fcf1e2b.js.map": "/static/js/main.3fcf1e2b.js.map",
+    "main.e31897b0.css.map": "/static/css/main.e31897b0.css.map",
+    "main.f364a5c3.js.map": "/static/js/main.f364a5c3.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45669c1b.css",
-    "static/js/main.3fcf1e2b.js"
+    "static/css/main.e31897b0.css",
+    "static/js/main.f364a5c3.js"
   ]
 }
