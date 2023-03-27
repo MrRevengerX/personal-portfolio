@@ -61,7 +61,6 @@ function HeroSection() {
       })
       .catch((err) => console.log("fuck ", err));
   }, []);
-  console.log(resumeLink[0]);
 
   function downloadResume() {
     window.open(resumeLink[0].resumeLink);

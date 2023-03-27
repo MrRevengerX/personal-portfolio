@@ -46,10 +46,10 @@ function App() {
       .catch((err) => console.log("fuck ", err));
   }, []);
 
-  console.log(projects);
+  console.log("Hello there... Looking for something?");
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-violet-200 dark:bg-gray-900 ">
+    <div className="flex flex-col items-center min-h-screen bg-violet-200 dark:bg-gray-900 select-none">
       <NavigationBar />
       <HeroSection />
       <TechnicalSkills />
