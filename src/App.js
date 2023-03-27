@@ -47,9 +47,7 @@ function App() {
   }, []);
 
   console.log(projects);
-  // console.log(skills[0].technology);
 
-  console.log(projects);
   return (
     <div className="flex flex-col items-center min-h-screen bg-violet-200 dark:bg-gray-900 ">
       <NavigationBar />
