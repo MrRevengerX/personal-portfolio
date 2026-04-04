@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typed from "react-typed";
 import { motion } from "framer-motion";
-import DrawBlob, { BlobType, generatePoints } from "blob-animated";
+import DrawBlob, { generatePoints } from "blob-animated";
 import devImage from "../assets/img/mrDev.jpg";
 
 import { GraphQLClient, gql } from "graphql-request";
@@ -42,6 +42,7 @@ function HeroSection() {
     },
   };
   useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
     const Blob = new DrawBlob({
       canvas: document.getElementById("imageCanvas"),
       maskedElement: document.getElementById("devImg"),
@@ -60,7 +61,7 @@ function HeroSection() {
         setresumeLink(data.resumes);
       })
       .catch((err) => console.log("fuck ", err));
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   console.log(resumeLink[0]);
 
   function downloadResume() {

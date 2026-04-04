@@ -39,6 +39,7 @@ function Footer() {
                 href="https://www.linkedin.com/in/ravindusenrathna/"
                 class="hover:text-my-purple-400 transition-colors duration-200 ease-in-out"
                 target={"_blank"}
+                rel="noreferrer"
               >
                 LinkedIn
               </a>
@@ -48,6 +49,7 @@ function Footer() {
                 href="https://github.com/MrRevengerX"
                 class="hover:text-my-purple-400 transition-colors duration-200 ease-in-out"
                 target={"_blank"}
+                rel="noreferrer"
               >
                 GitHub
               </a>
@@ -57,6 +59,7 @@ function Footer() {
                 href="https://www.behance.net/ravindusenruwan"
                 class="hover:text-my-purple-400 transition-colors duration-200 ease-in-out"
                 target={"_blank"}
+                rel="noreferrer"
               >
                 Behance
               </a>
@@ -66,6 +69,7 @@ function Footer() {
                 href="mailto:ravindusenruwan@gmail.com"
                 class="hover:text-my-purple-400 transition-colors duration-200 ease-in-out"
                 target={"_blank"}
+                rel="noreferrer"
               >
                 Gmail
               </a>

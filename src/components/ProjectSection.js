@@ -3,26 +3,6 @@ import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
 function ProjectSection(props) {
-  const projectContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-  const projectAnimation = {
-    hidden: { opacity: 0, y: 20 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
   // console.log(projects);
   return (
     <div className="min-h-screen mb-16 lg:mb-18 mt-12 lg:mt-20">
