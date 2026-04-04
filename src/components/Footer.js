@@ -36,7 +36,7 @@ function Footer() {
           <ul class="flex flex-wrap items-center text-sm font-medium gap-5 text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
               <a
-                href="https://www.linkedin.com/in/ravindusenruwan/"
+                href="https://www.linkedin.com/in/ravindusenrathna/"
                 class="hover:text-my-purple-400 transition-colors duration-200 ease-in-out"
                 target={"_blank"}
               >

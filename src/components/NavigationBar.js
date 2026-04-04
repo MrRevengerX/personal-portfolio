@@ -82,7 +82,7 @@ function NavigationBar() {
           >
             <motion.a
               variants={socialIcon}
-              href="https://www.linkedin.com/in/ravindusenruwan/"
+              href="https://www.linkedin.com/in/ravindusenrathna/"
               className="hover:text-my-purple-400 ease-in-out transition-colors duration-200"
               target={"_blank"}
             >
